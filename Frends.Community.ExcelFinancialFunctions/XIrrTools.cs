@@ -17,10 +17,9 @@ namespace Frends.Community.ExcelFinancialFunctions
         /// <param name="options">Define tollerance and max iterations.</param>
         /// <param name="cancellationToken"></param>
         /// <returns>Object {string Value} </returns>
-        public static Result CalculateXIrr(Parameters input, [PropertyTab] Options options, CancellationToken cancellationToken)
+        public static Result CalculateXIrr([PropertyTab] Parameters input, [PropertyTab] Options options, CancellationToken cancellationToken)
         {
-            string inputJArray = input.Input;
-            JArray jarray = JArray.Parse(inputJArray);
+            JArray jarray = JArray.Parse(input.Input);
 
             int maxIter = options.MaxIterations;
             double tol = options.Tolerance;
