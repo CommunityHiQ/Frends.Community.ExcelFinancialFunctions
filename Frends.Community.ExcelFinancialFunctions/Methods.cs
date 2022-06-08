@@ -52,7 +52,7 @@ namespace Frends.Community.ExcelFinancialFunctions
 
 
         /// <summary>
-        /// Calculates XIrr using Newtons method
+        /// Calculates XIrr using Newton's method
         /// </summary>
         /// <param name="cancellationToken"></param>
         public static double Newtons_method(double guess, fx f, fx df, double tol, int maxIterations, CancellationToken cancellationToken)

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Frends.Community.ExcelFinancialFunctions
 {
     /// <summary>
-    /// Parameters class usually contains parameters that are required.
+    /// Contains execution parameters
     /// </summary>
     public class Parameters
     {
@@ -32,7 +32,7 @@ namespace Frends.Community.ExcelFinancialFunctions
         public double Tolerance { get; set; }
 
         /// <summary>
-        /// Max number of iterations(to prevent from infinite looping).
+        /// Max number of iterations(to prevent infinite looping).
         /// </summary>
         [DefaultValue(100)]
         public int MaxIterations { get; set; }

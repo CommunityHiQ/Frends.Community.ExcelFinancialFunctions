@@ -10,7 +10,7 @@ namespace Frends.Community.ExcelFinancialFunctions
     public static class XIrrTools
     {
         /// <summary>
-        /// A Frends-task for calculating XIrr value. More info in 
+        /// A Frends-task for calculating XIrr value. See documentation for more information. 
         /// Documentation: https://github.com/CommunityHiQ/Frends.Community.ExcelFinancialFunctions
         /// </summary>
         /// <param name="input">Values and dates for calculations</param>
