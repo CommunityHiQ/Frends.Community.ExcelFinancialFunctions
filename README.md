@@ -87,3 +87,4 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | 0.1.4   | Test case created, README updated |
 | 0.1.5   | Fixed input tab |
 | 0.1.6   | Minor changes to descriptions |
+| 0.1.7   | Add description to .csproj file |
