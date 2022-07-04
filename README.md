@@ -20,7 +20,7 @@ https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view i
 
 ## XIrrTools
 
-Task calculates XIrr value using Newtons method
+Task calculates XIrr value using Excel Financial Functions from .NET library
 
 ### Properties
 
@@ -32,8 +32,7 @@ Task calculates XIrr value using Newtons method
 
 | Property | Type | Description | Example |
 | -------- | -------- | -------- | -------- |
-| Tolerance | `double` | Tolerance used in calculations. | `0.00000001` |
-| MaxIterations | `int` | Max. number of iterations while calculating Xirr value. | `100` |
+| Guess | `double` | Guess is a number that you guess is close to the result of XIRR. | `0.1` |
 
 ### Returns
 
@@ -41,7 +40,7 @@ A result object with parameters.
 
 | Property | Type | Description | Example |
 | -------- | -------- | -------- | -------- |
-| Value | `string` | Calculated XIrr value. | `77.4425237947709` |
+| Value | `string` | Calculated XIrr value. | `77.4425237947701` |
 
 Usage:
 To fetch result use syntax:
@@ -88,3 +87,8 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | 0.1.5   | Fixed input tab |
 | 0.1.6   | Minor changes to descriptions |
 | 0.1.7   | Add description to .csproj file |
+| 0.1.8   | Calculate Xirr using .NET Excel library |
+| 0.1.9   | Add FSharp.Core to the task |
+| 0.1.10  | Remove unnecessary comments and namespaces |
+| 0.1.11  | Update README |
+| 0.1.12  | Add option to return value on error |
