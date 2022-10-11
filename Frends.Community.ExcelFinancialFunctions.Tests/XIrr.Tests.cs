@@ -36,13 +36,12 @@ namespace Frends.Community.ExcelFinancialFunctions.Tests
 
             var options = new Options
             {
-                Tolerance = 0.00000001,
-                MaxIterations = 100
+                Guess = 0.1
             };
 
             var ret = XIrrTools.CalculateXIrr(input, options, new System.Threading.CancellationToken());
 
-            Assert.That(ret.Value, Is.EqualTo("77.4425237947709"));
+            Assert.That(ret.Value, Is.EqualTo("77.4425237947701"));
         }
     }
 }

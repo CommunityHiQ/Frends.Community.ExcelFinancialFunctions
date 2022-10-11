@@ -11,7 +11,7 @@ namespace Frends.Community.ExcelFinancialFunctions
     public class Parameters
     {
         /// <summary>
-        /// JArray string with value and date
+        /// JArray string with value and date Dates should be sorted in ascending order.
         /// </summary>
         /// <example>
         /// [{value: 1.234, date: "2021-05-25"}, {value: 2.345, date: "2022-05-25"}]
@@ -26,16 +26,25 @@ namespace Frends.Community.ExcelFinancialFunctions
     public class Options
     {
         /// <summary>
-        /// Tolerance that will be used in calculations.
+        /// Guess is a number that you guess is close to the result of XIRR.
         /// </summary>
-        [DefaultValue(0.00000001)]
-        public double Tolerance { get; set; }
+        [DefaultValue(0.1)]
+        public double Guess { get; set; }
 
         /// <summary>
-        /// Max number of iterations(to prevent infinite looping).
+        /// If set, allows you to ignore errors and return specified value.
+        /// If not set, error will be thrown normally.
         /// </summary>
-        [DefaultValue(100)]
-        public int MaxIterations { get; set; }
+        [DefaultValue(false)]
+        public bool ReturnValueOnError { get; set; }
+
+        /// <summary>
+        /// What task should return on failure (string)
+        /// </summary>
+        [UIHint(nameof(ReturnValueOnError), "", true)]
+        [DisplayFormat(DataFormatString = "Text")]
+        [DefaultValue("NM")]
+        public string ReturnValue { get; set; }
     }
 
     public class Result
