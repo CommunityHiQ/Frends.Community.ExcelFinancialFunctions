@@ -26,7 +26,7 @@ Task calculates XIrr value using Excel Financial Functions from .NET library
 
 | Property | Type | Description | Example |
 | -------- | -------- | -------- | -------- |
-| Input | `string` | JArray string with values and dates. | `[{value: 1.234, date: "2021-05-25"}, {value: 2.345, date: "2022-05-25"}]` |
+| Input | `string` | JArray string with values and dates. Dates should be sorted in ascending order.| `[{value: 1.234, date: "2021-05-25"}, {value: 2.345, date: "2022-05-25"}]` |
 
 ### Options
 
@@ -92,3 +92,4 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | 0.1.10  | Remove unnecessary comments and namespaces |
 | 0.1.11  | Update README |
 | 0.1.12  | Add option to return value on error |
+| 0.1.13  | Update Properties description |

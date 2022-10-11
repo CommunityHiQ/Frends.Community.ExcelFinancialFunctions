@@ -11,7 +11,7 @@ namespace Frends.Community.ExcelFinancialFunctions
     public class Parameters
     {
         /// <summary>
-        /// JArray string with value and date
+        /// JArray string with value and date Dates should be sorted in ascending order.
         /// </summary>
         /// <example>
         /// [{value: 1.234, date: "2021-05-25"}, {value: 2.345, date: "2022-05-25"}]
