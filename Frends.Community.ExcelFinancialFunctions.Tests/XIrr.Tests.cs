@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System;
+using System.Globalization;
 
 namespace Frends.Community.ExcelFinancialFunctions.Tests
 {
@@ -41,8 +42,9 @@ namespace Frends.Community.ExcelFinancialFunctions.Tests
             };
 
             var ret = XIrrTools.CalculateXIrr(input, options, new System.Threading.CancellationToken());
+            string decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
 
-            Assert.That(ret.Value, Is.EqualTo("77.4425237947709"));
+            Assert.That(ret.Value, Is.EqualTo($"77{decimalSeparator}44252379477088"));
         }
     }
 }
