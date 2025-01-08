@@ -43,7 +43,7 @@ namespace Frends.Community.ExcelFinancialFunctions.Tests
 
             var ret = XIrrTools.CalculateXIrr(input, options, new System.Threading.CancellationToken());
             string decimalSeparator = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
-            double val =double.Parse($"77{decimalSeparator}44252379477088");
+            double val =double.Parse(ret.Value);
            
             Assert.That(Math.Round(val,13), Is.EqualTo(77.4425237947709));
         }
